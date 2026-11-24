@@ -5,14 +5,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Las Piñas National High School - Almanza</title>
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="shared.css"></head>
+<link href="index.css" rel="stylesheet"/>
+<link href="shared.css?v=3" rel="stylesheet"/></head>
 <body>
 <div id="progress"></div>
 <div id="welcome-screen">
 <div id="particles"><i class="particle p1"></i><i class="particle p2"></i><i class="particle p3"></i><i class="particle p4"></i><i class="particle p5"></i></div>
 <div class="welcome-box">
-<img alt="LPNHS Almanza logo" class="welcome-logo" src="SCHOOLLOGO.jpg"/>
+<img alt="LPNHS Almanza logo" class="welcome-logo" loading="eager" src="SCHOOLLOGO.jpg"/>
 <div class="eyebrow">WELCOME TO</div>
 <h1>LAS PIÑAS NATIONAL HIGH SCHOOL</h1>
 <p>ALMANZA • SCHOOL ID: 320306</p>
@@ -22,7 +22,7 @@
 </div>
 <header>
 <div class="brand">
-<img alt="LPNHS Almanza logo" src="SCHOOLLOGO.jpg"/>
+<img alt="LPNHS Almanza logo" loading="eager" src="SCHOOLLOGO.jpg"/>
 <div><h1>LAS PIÑAS NATIONAL HIGH SCHOOL</h1><p>ALMANZA • OFFICIAL SCHOOL WEBSITE</p></div>
 </div>
 <button class="mobile-menu-button" id="mobile-menu-button">MENU</button>
@@ -36,7 +36,7 @@
 <li><a href="SECTION_LIST.html">Grade Levels &amp; Sections</a></li><li><a href="MIM.html">Mathematics Club</a></li><li><a href="ICT_CLUB.html">ICT Club</a></li><li><a href="g3_project_TheScribe.html">The Scribe</a></li><li><a href="Ang_Tinig.html">Ang Tinig</a></li>
 </ul></li>
 <li><button class="menu-button" data-menu="student-menu" type="button">STUDENT LIFE</button><ul class="dropdown" id="student-menu">
-<li><a href="SSLG.html">SSLG</a></li><li><a href="g3_project_ESPCLUB.html">ESP Club</a></li><li><a href="BKD.html">BKD Club</a></li><li><a href="CIC (1).html">CIC Club</a></li><li><a href="GSP.html">Girl Scouts</a></li><li><a href="BSP.html">Boy Scouts</a></li><li><a href="GLEE.html">Glee Club</a></li><li><a href="AFDT_Club.html">Folkloric Dance Troupe</a></li><li><a href="YoungFarmersClub.html">Young Farmers Club</a></li><li><a href="g3_project_YES-O.html">YES-O Club</a></li>
+<li><a href="sslg.html">SSLG</a></li><li><a href="g3_project_ESPCLUB.html">ESP Club</a></li><li><a href="BKD.html">BKD Club</a></li><li><a href="CIC (1).html">CIC Club</a></li><li><a href="GSP.html">Girl Scouts</a></li><li><a href="BSP.html">Boy Scouts</a></li><li><a href="GLEE.html">Glee Club</a></li><li><a href="AFDT_Club.html">Folkloric Dance Troupe</a></li><li><a href="youngfarmersclub.html">Young Farmers Club</a></li><li><a href="g3_project_YES-O.html">YES-O Club</a></li>
 </ul></li>
 <li><button class="menu-button" data-menu="hymns-menu" type="button">HYMNS</button><ul class="dropdown" id="hymns-menu">
 <li><a href="ALMANZIANS_HYMN.html">Almanzians Hymn</a></li><li><a href="las_pinas_hymn.html">Las Piñas Hymn</a></li><li><a href="ncr_hymn.html">NCR Hymn</a></li><li><a href="national_anthem.html">National Anthem</a></li>
@@ -83,11 +83,11 @@
           that shape their school experience.
         </p>
 <details class="history-detail">
-          <summary class="history-more">
+<summary class="history-more">
 <span>READ MORE ABOUT OUR HISTORY</span>
 <span class="history-plus">+</span>
 </summary>
-          <div class="history-more-content">
+<div class="history-more-content">
 <p>
               Las Piñas National High School – Almanza stands as a public secondary school
               serving learners in Almanza Uno, Las Piñas City. Its story is closely connected
@@ -119,25 +119,23 @@
 </div>
 </div>
 </section>
-
-<section class="school-directory" aria-label="Faculty and school facilities">
-  <div class="directory-heading">
-    <span class="directory-kicker">GET TO KNOW OUR SCHOOL</span>
-    <h2>Our School</h2>
-    <p>Meet the people behind our school and explore the spaces where learning takes place.</p>
-  </div>
-  <div class="directory-grid">
-    <a class="directory-card" href="faculty.html">
-      <span class="directory-number">01</span>
-      <div><h3>Faculty</h3><p>View the faculty organizational chart of LPNHS–Almanza.</p><span class="directory-link">VIEW FACULTY →</span></div>
-    </a>
-    <a class="directory-card" href="facilities.html">
-      <span class="directory-number">02</span>
-      <div><h3>School Facilities</h3><p>Explore the facilities around the LPNHS–Almanza campus.</p><span class="directory-link">VIEW FACILITIES →</span></div>
-    </a>
-  </div>
+<section aria-label="Faculty and school facilities" class="school-directory">
+<div class="directory-heading">
+<span class="directory-kicker">GET TO KNOW OUR SCHOOL</span>
+<h2>Our School</h2>
+<p>Meet the people behind our school and explore the spaces where learning takes place.</p>
+</div>
+<div class="directory-grid">
+<a class="directory-card" href="faculty.html">
+<span class="directory-number">01</span>
+<div><h3>Faculty</h3><p>View the faculty organizational chart of LPNHS–Almanza.</p><span class="directory-link">VIEW FACULTY →</span></div>
+</a>
+<a class="directory-card" href="facilities.html">
+<span class="directory-number">02</span>
+<div><h3>School Facilities</h3><p>Explore the facilities around the LPNHS–Almanza campus.</p><span class="directory-link">VIEW FACILITIES →</span></div>
+</a>
+</div>
 </section>
-
 <section class="schedule-preview" id="schedule">
 <div class="schedule-preview-inner">
 <div class="schedule-preview-copy">
@@ -146,13 +144,12 @@
 <p>Check the official class schedule for regular students and the Open High School Program, including the assigned school hours for each grade level.</p>
 <a class="schedule-link" href="schedule.html">VIEW OFFICIAL SCHEDULE <span>→</span></a>
 </div>
-<a class="schedule-preview-image" href="schedule.html" aria-label="Open the official class schedule">
-<img src="schedule.jpg" alt="Official LPNHS-Almanza class schedule announcement"/>
+<a aria-label="Open the official class schedule" class="schedule-preview-image" href="schedule.html">
+<img alt="Official LPNHS-Almanza class schedule announcement" loading="eager" src="schedule.jpg"/>
 </a>
 </div>
 </section>
 <section class="school-photo-only"><div aria-label="School photo" class="about-photo" role="img"></div></section>
-
 <section class="clubs-bg" id="clubs">
 <div class="section-head">
 <div class="tag">STUDENT LIFE</div>
@@ -180,7 +177,7 @@
 <span>VIEW ORGANIZATIONS →</span>
 </button>
 <div class="club-options" id="leadership-clubs">
-<a href="SSLG.html">SSLG</a>
+<a href="sslg.html">SSLG</a>
 <a href="g3_project_ESPCLUB.html">ESP Club</a>
 <a href="BKD.html">BKD Club</a>
 <a href="CIC (1).html">CIC Club</a>
@@ -225,7 +222,7 @@
 <span>VIEW ORGANIZATION →</span>
 </button>
 <div class="club-options" id="farming-clubs">
-<a href="YoungFarmersClub.html">Young Farmers Club</a>
+<a href="youngfarmersclub.html">Young Farmers Club</a>
 </div>
 </div>
 </div>
@@ -244,7 +241,7 @@
 </div></section>
 <section class="team-preview" id="team"><div class="section-head"><div class="tag">THE PEOPLE BEHIND THE WEBSITE</div><h2>Meet the Website Team</h2><p>A student-built website created through teamwork, ideas, coding, and collaboration.</p></div>
 <div class="team-card">
-<div class="lead-avatar"><img alt="Mhayumie Granados" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" src="mhayumie_granados.jpg"/><span class="lead-initials">MG</span></div><div><small>LEAD CODER</small><h3>Mhayumie Granados</h3><p>Lead developer of the LPNHS — Almanza student website project.</p><a href="credits.html">MEET THE WHOLE TEAM →</a></div>
+<div class="lead-avatar"><img alt="Mhayumie Granados" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" src="mhayumie_granados.jpg"/><span class="lead-initials">MG</span></div><div><small>LEAD CODER</small><h3>Mhayumie Granados</h3><p>Lead developer of the LPNHS — Almanza student website project.</p><a href="credits.html">MEET THE WHOLE TEAM →</a></div>
 </div></section>
 <section class="feedback" id="feedback"><div class="section-head"><div class="tag" style="color:#ffb8bc">WE VALUE YOUR VOICE</div><h2>Website Feedback</h2><p>Tell the website team about your experience.</p></div>
 <form action="https://formsubmit.co/mhayumiegranados09@gmail.com" class="form" method="POST">
@@ -264,11 +261,11 @@
 </div></section>
 </main>
 <footer><div class="footer-grid">
-<div><div class="footer-logo"><img alt="School logo" src="SCHOOLLOGO.jpg"/><div><h2>LAS PIÑAS NATIONAL HIGH SCHOOL</h2><p>ALMANZA • SCHOOL ID: 320306</p></div></div><p style="margin-top:15px">Student-made digital school website project.</p></div>
+<div><div class="footer-logo"><img alt="School logo" loading="eager" src="SCHOOLLOGO.jpg"/><div><h2>LAS PIÑAS NATIONAL HIGH SCHOOL</h2><p>ALMANZA • SCHOOL ID: 320306</p></div></div><p style="margin-top:15px">Student-made digital school website project.</p></div>
 <div><h3>EXPLORE</h3><a href="MISSION_VISION.html">About</a><a href="#clubs">Student Life</a><a href="#hymns">Hymns</a><a href="schedule.html">Class Schedule</a><a href="#team">Website Team</a></div>
 <div><h3>PROJECT</h3><a href="credits.html">Credits &amp; Sources</a><a href="MISSION_VISION.html">Mission &amp; Vision</a><a href="SECTION_LIST.html">Grade Levels</a><a href="#contact">Contact</a></div>
 </div><div class="copyright">© 2026 • LPNHS — Almanza • Student Website Project</div></footer>
-<div id="lightbox"><button class="close-lightbox" id="close-lightbox">×</button><img alt="School moment enlarged" id="lightbox-img" src=""/></div>
+<div id="lightbox"><button class="close-lightbox" id="close-lightbox">×</button><img alt="School moment enlarged" id="lightbox-img" loading="eager" src=""/></div>
 <script>
 
 const welcome=document.getElementById("welcome-screen"),enter=document.getElementById("welcome-enter");
@@ -331,7 +328,6 @@ if (gradeSelect && sectionSelect) {
   });
 }
 </script>
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   /* Expand/collapse club categories without scrolling anywhere. */
@@ -352,7 +348,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
 <script id="mobile-navigation">
 (function(){
   const button=document.getElementById('mobile-menu-button');
@@ -366,19 +361,69 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 </script>
 <script id="shared-nav-script">
-(function(){
-  const nav=document.getElementById('main-nav');
-  if(!nav) return;
-  const buttons=nav.querySelectorAll('.menu-button');
-  function closeMenus(){buttons.forEach(btn=>{const m=document.getElementById(btn.dataset.menu);if(m)m.classList.remove('open');btn.classList.remove('active');btn.setAttribute('aria-expanded','false');});}
-  buttons.forEach(btn=>{btn.setAttribute('aria-expanded','false');btn.addEventListener('click',function(e){e.stopPropagation();const menu=document.getElementById(btn.dataset.menu);const wasOpen=menu.classList.contains('open');closeMenus();if(!wasOpen){menu.classList.add('open');btn.classList.add('active');btn.setAttribute('aria-expanded','true');}});});
-  nav.querySelectorAll('.dropdown a').forEach(a=>a.addEventListener('click',function(){
-    if(location.pathname.endsWith('index.html') || location.pathname.endsWith('/')){
-      sessionStorage.setItem('lpnsa-home-scroll',String(window.scrollY));
+(function () {
+  const nav = document.getElementById('main-nav');
+  const mobileButton = document.getElementById('mobile-menu-button');
+  if (!nav) return;
+  const buttons = Array.from(nav.querySelectorAll('.menu-button'));
+  function closeMenus() {
+    buttons.forEach(function (button) {
+      const menu = document.getElementById(button.dataset.menu);
+      if (menu) menu.classList.remove('open');
+      button.classList.remove('active');
+      button.setAttribute('aria-expanded', 'false');
+    });
+  }
+  buttons.forEach(function (button) {
+    button.setAttribute('aria-expanded', 'false');
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const menu = document.getElementById(button.dataset.menu);
+      if (!menu) return;
+      const shouldOpen = !menu.classList.contains('open');
+      closeMenus();
+      if (shouldOpen) {
+        menu.classList.add('open');
+        button.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  if (mobileButton) {
+    mobileButton.setAttribute('aria-controls', 'main-nav');
+    mobileButton.setAttribute('aria-expanded', 'false');
+    mobileButton.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.toggle('mobile-open');
+      mobileButton.setAttribute('aria-expanded', String(isOpen));
+      mobileButton.textContent = isOpen ? 'CLOSE MENU' : 'MENU';
+      if (!isOpen) closeMenus();
+    });
+  }
+  nav.querySelectorAll('.dropdown a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      closeMenus();
+      nav.classList.remove('mobile-open');
+      if (mobileButton) {
+        mobileButton.setAttribute('aria-expanded', 'false');
+        mobileButton.textContent = 'MENU';
+      }
+    });
+  });
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('#main-nav') && !event.target.closest('#mobile-menu-button')) closeMenus();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeMenus();
+      nav.classList.remove('mobile-open');
+      if (mobileButton) {
+        mobileButton.setAttribute('aria-expanded', 'false');
+        mobileButton.textContent = 'MENU';
+      }
     }
-    closeMenus();
-  }));
-  document.addEventListener('click',function(e){if(!e.target.closest('#main-nav'))closeMenus();});
+  });
 })();
 </script>
 <script id="save-home-scroll-before-navigation">

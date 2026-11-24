@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Official Class Schedule | LPNHS-Almanza</title>
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="shared.css">
+<link href="index.css" rel="stylesheet"/>
+<link href="shared.css?v=3" rel="stylesheet"/>
 <style>
 body{background:#f5f8fc}
 .schedule-page{min-height:calc(100vh - 100px);padding:64px 6% 80px}
@@ -26,17 +27,27 @@ body{background:#f5f8fc}
 <body>
 <header>
 <div class="brand">
-<img alt="LPNHS Almanza logo" src="SCHOOLLOGO.jpg">
+<img alt="LPNHS Almanza logo" loading="eager" src="SCHOOLLOGO.jpg"/>
 <div><h1>LAS PIÑAS NATIONAL HIGH SCHOOL</h1><p>ALMANZA • OFFICIAL SCHOOL WEBSITE</p></div>
 </div>
-<button class="mobile-menu-button" id="mobile-menu-button" aria-expanded="false">MENU</button>
+<button aria-expanded="false" class="mobile-menu-button" id="mobile-menu-button">MENU</button>
 <nav class="shared-site-nav" id="main-nav">
 <ul>
 <li><a href="index.html#home">HOME</a></li>
-<li><a href="MISSION_VISION.html">ABOUT</a></li>
-<li><a href="SECTION_LIST.html">ACADEMICS</a></li>
-<li><a href="schedule.html" aria-current="page">SCHEDULE</a></li>
-<li><a href="credits.html">TEAM</a></li>
+<li><button class="menu-button" data-menu="about-menu" type="button">ABOUT</button><ul class="dropdown" id="about-menu">
+<li><a href="MISSION_VISION.html">Mission &amp; Vision</a></li><li><a href="ORG_CHART.html">Organizational Chart</a></li><li><a href="faculty.html">Faculty</a></li><li><a href="facilities.html">School Facilities</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="academics-menu" type="button">ACADEMICS</button><ul class="dropdown" id="academics-menu">
+<li><a href="SECTION_LIST.html">Grade Levels &amp; Sections</a></li><li><a href="MIM.html">Mathematics Club</a></li><li><a href="ICT_CLUB.html">ICT Club</a></li><li><a href="g3_project_TheScribe.html">The Scribe</a></li><li><a href="Ang_Tinig.html">Ang Tinig</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="student-menu" type="button">STUDENT LIFE</button><ul class="dropdown" id="student-menu">
+<li><a href="sslg.html">SSLG</a></li><li><a href="g3_project_ESPCLUB.html">ESP Club</a></li><li><a href="BKD.html">BKD Club</a></li><li><a href="CIC (1).html">CIC Club</a></li><li><a href="GSP.html">Girl Scouts</a></li><li><a href="BSP.html">Boy Scouts</a></li><li><a href="GLEE.html">Glee Club</a></li><li><a href="AFDT_Club.html">Folkloric Dance Troupe</a></li><li><a href="youngfarmersclub.html">Young Farmers Club</a></li><li><a href="g3_project_YES-O.html">YES-O Club</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="hymns-menu" type="button">HYMNS</button><ul class="dropdown" id="hymns-menu">
+<li><a href="ALMANZIANS_HYMN.html">Almanzians Hymn</a></li><li><a href="las_pinas_hymn.html">Las Piñas Hymn</a></li><li><a href="ncr_hymn.html">NCR Hymn</a></li><li><a href="national_anthem.html">National Anthem</a></li>
+</ul></li>
+<li><a href="schedule.html">SCHEDULE</a></li>
+<li><button class="menu-button" data-menu="team-menu" type="button">TEAM</button><ul class="dropdown" id="team-menu"><li><a href="credits.html">Website Team &amp; Credits</a></li></ul></li>
 </ul>
 </nav>
 </header>
@@ -48,7 +59,7 @@ body{background:#f5f8fc}
 <p>Check the school's announced class hours for regular students and the Open High School Program.</p>
 </div>
 <div class="schedule-card">
-<img src="schedule.jpg" alt="LPNHS-Almanza official class schedule: Regular students, Grade 7 and Grade 10 from 5:40 a.m. to 12:20 p.m.; Grade 8 and Grade 9 from 12:20 p.m. to 7:00 p.m. Open High School Program from 6:40 a.m. to 4:00 p.m.">
+<img alt="LPNHS-Almanza official class schedule: Regular students, Grade 7 and Grade 10 from 5:40 a.m. to 12:20 p.m.; Grade 8 and Grade 9 from 12:20 p.m. to 7:00 p.m. Open High School Program from 6:40 a.m. to 4:00 p.m." loading="eager" src="schedule.jpg"/>
 </div>
 <div class="schedule-actions">
 <a class="schedule-back" href="index.html">← BACK TO HOME</a>
@@ -65,6 +76,72 @@ body{background:#f5f8fc}
   button.setAttribute('aria-expanded',String(opened));
   button.textContent=opened?'CLOSE':'MENU';
  });
+})();
+</script>
+<script id="shared-nav-script">
+(function () {
+  const nav = document.getElementById('main-nav');
+  const mobileButton = document.getElementById('mobile-menu-button');
+  if (!nav) return;
+  const buttons = Array.from(nav.querySelectorAll('.menu-button'));
+  function closeMenus() {
+    buttons.forEach(function (button) {
+      const menu = document.getElementById(button.dataset.menu);
+      if (menu) menu.classList.remove('open');
+      button.classList.remove('active');
+      button.setAttribute('aria-expanded', 'false');
+    });
+  }
+  buttons.forEach(function (button) {
+    button.setAttribute('aria-expanded', 'false');
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const menu = document.getElementById(button.dataset.menu);
+      if (!menu) return;
+      const shouldOpen = !menu.classList.contains('open');
+      closeMenus();
+      if (shouldOpen) {
+        menu.classList.add('open');
+        button.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  if (mobileButton) {
+    mobileButton.setAttribute('aria-controls', 'main-nav');
+    mobileButton.setAttribute('aria-expanded', 'false');
+    mobileButton.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.toggle('mobile-open');
+      mobileButton.setAttribute('aria-expanded', String(isOpen));
+      mobileButton.textContent = isOpen ? 'CLOSE MENU' : 'MENU';
+      if (!isOpen) closeMenus();
+    });
+  }
+  nav.querySelectorAll('.dropdown a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      closeMenus();
+      nav.classList.remove('mobile-open');
+      if (mobileButton) {
+        mobileButton.setAttribute('aria-expanded', 'false');
+        mobileButton.textContent = 'MENU';
+      }
+    });
+  });
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('#main-nav') && !event.target.closest('#mobile-menu-button')) closeMenus();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeMenus();
+      nav.classList.remove('mobile-open');
+      if (mobileButton) {
+        mobileButton.setAttribute('aria-expanded', 'false');
+        mobileButton.textContent = 'MENU';
+      }
+    }
+  });
 })();
 </script>
 </body>

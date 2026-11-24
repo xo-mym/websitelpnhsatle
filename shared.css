@@ -1,0 +1,102 @@
+
+/* LPNHS-Almanza: consistent shared header and navigation across every page */
+.shared-site-nav, .shared-site-nav * { box-sizing:border-box !important; }
+header {
+  display:flex !important; flex-wrap:wrap !important; align-items:center !important;
+  justify-content:space-between !important; gap:14px 22px !important;
+  position:relative !important; z-index:5000 !important;
+  padding:16px clamp(16px,4vw,54px) !important;
+  background:#fff !important;
+}
+header .brand, header .school-name {
+  display:flex !important; align-items:center !important; gap:12px !important;
+  flex:1 1 280px !important; min-width:0 !important;
+}
+header .brand img, header .school-name img {
+  width:58px !important; height:58px !important; object-fit:contain !important;
+  flex:0 0 58px !important; margin:0 !important;
+}
+header .brand h1, header .school-name h1 {
+  margin:0 !important; color:#073b78 !important;
+  font-size:clamp(14px,1.7vw,21px) !important; line-height:1.2 !important;
+}
+header .brand p, header .school-name p {
+  margin:4px 0 0 !important; color:#b42332 !important;
+  font-size:10px !important; letter-spacing:1.3px !important;
+}
+.mobile-menu-button {
+  display:none !important; border:0 !important; border-radius:12px !important;
+  background:#073b78 !important; color:#fff !important; padding:11px 18px !important;
+  font-weight:800 !important; font-size:13px !important; cursor:pointer !important;
+}
+nav.shared-site-nav {
+  display:block !important; flex:1 0 100% !important; width:100% !important;
+  min-width:0 !important; margin:0 !important; padding:0 !important;
+  position:relative !important; z-index:5001 !important;
+  border-top:1px solid #edf1f6 !important;
+}
+nav.shared-site-nav > ul {
+  display:flex !important; flex-direction:row !important; flex-wrap:wrap !important;
+  align-items:center !important; justify-content:center !important; gap:4px !important;
+  list-style:none !important; margin:0 !important; padding:8px 0 0 !important;
+}
+nav.shared-site-nav ul, nav.shared-site-nav li {
+  list-style:none !important; margin:0 !important;
+}
+nav.shared-site-nav > ul > li {
+  display:block !important; position:relative !important; padding:0 !important;
+}
+nav.shared-site-nav a, nav.shared-site-nav .menu-button {
+  display:block !important; width:auto !important; margin:0 !important;
+  border:0 !important; border-radius:8px !important; background:transparent !important;
+  color:#123b68 !important; text-decoration:none !important;
+  font-family:inherit !important; font-size:11px !important; font-weight:800 !important;
+  line-height:1.25 !important; white-space:nowrap !important;
+  padding:11px 13px !important; cursor:pointer !important;
+}
+nav.shared-site-nav a:hover, nav.shared-site-nav .menu-button:hover,
+nav.shared-site-nav .menu-button.active {
+  background:#f0f5fb !important; color:#c51f32 !important;
+}
+nav.shared-site-nav .menu-button::after { content:" ▾" !important; font-size:9px !important; }
+nav.shared-site-nav .dropdown {
+  display:none !important; position:absolute !important; top:100% !important; left:0 !important;
+  z-index:7000 !important; width:245px !important; max-width:calc(100vw - 28px) !important;
+  max-height:70vh !important; overflow-y:auto !important;
+  margin:0 !important; padding:6px !important; list-style:none !important;
+  background:#fff !important; border:1px solid #dfe8f2 !important;
+  border-top:3px solid #c51f32 !important; border-radius:0 0 12px 12px !important;
+  box-shadow:0 16px 35px rgba(10,35,65,.18) !important;
+}
+nav.shared-site-nav .dropdown.open { display:block !important; }
+nav.shared-site-nav .dropdown li { display:block !important; width:100% !important; }
+nav.shared-site-nav .dropdown a {
+  width:100% !important; white-space:normal !important; padding:10px 12px !important;
+  border-bottom:1px solid #edf1f6 !important; font-weight:600 !important;
+}
+nav.shared-site-nav .dropdown li:last-child a { border-bottom:0 !important; }
+nav.shared-site-nav .dropdown a:hover { background:#f3f7fc !important; }
+@media (max-width:900px) {
+  header { gap:10px !important; padding:12px 16px !important; }
+  header .brand, header .school-name { flex:1 1 calc(100% - 105px) !important; }
+  header .brand img, header .school-name img { width:48px !important; height:48px !important; flex-basis:48px !important; }
+  .mobile-menu-button { display:inline-flex !important; align-items:center !important; justify-content:center !important; }
+  nav.shared-site-nav { display:none !important; flex:1 0 100% !important; border-top:1px solid #edf1f6 !important; }
+  nav.shared-site-nav.mobile-open { display:block !important; }
+  nav.shared-site-nav > ul {
+    display:flex !important; flex-direction:column !important; align-items:stretch !important;
+    justify-content:flex-start !important; gap:0 !important; padding:5px 0 !important;
+  }
+  nav.shared-site-nav > ul > li { width:100% !important; border-bottom:1px solid #edf1f6 !important; }
+  nav.shared-site-nav a, nav.shared-site-nav .menu-button {
+    width:100% !important; text-align:left !important; padding:12px 13px !important;
+    white-space:normal !important;
+  }
+  nav.shared-site-nav .dropdown {
+    position:static !important; width:100% !important; max-width:none !important;
+    max-height:none !important; overflow:visible !important; box-shadow:none !important;
+    border:0 !important; border-left:3px solid #c51f32 !important; border-radius:0 !important;
+    padding:0 0 5px 10px !important; margin:0 !important;
+  }
+  nav.shared-site-nav .dropdown a { padding:10px 12px !important; }
+}
