@@ -1,0 +1,240 @@
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f8fc;
+            color: #17365d;
+        }
+
+        .topbar {
+            background-color: #064b91;
+            color: white;
+            padding: 8px 6%;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: white;
+            padding: 18px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px #cccccc;
+        }
+
+        .school-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .school-name img {
+            width: 65px;
+            height: 65px;
+            margin-right: 15px;
+        }
+
+        .school-name h1 {
+            margin: 0;
+            font-size: 22px;
+            color: #17365d;
+        }
+
+        .school-name p {
+            margin: 5px 0 0;
+            color: #d52b3f;
+            font-size: 12px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #17365d;
+            margin-left: 25px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d52b3f;
+        }
+
+        .hero {
+            background: linear-gradient(110deg, #07549b, #365f9e, #d94b62);
+            padding: 75px 8%;
+            color: white;
+        }
+
+        .hero-box {
+            max-width: 650px;
+            background-color: rgba(0, 48, 100, 0.55);
+            padding: 30px;
+            border-left: 6px solid #e52c3e;
+            border-radius: 3px;
+        }
+
+        .hero-box p {
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin: 0 0 12px;
+        }
+
+        .hero-box h2 {
+            font-size: 38px;
+            margin: 0 0 15px;
+        }
+
+        .hero-box span {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .content {
+            width: 85%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title p {
+            color: #d14a59;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            margin: 0;
+            color: #17365d;
+        }
+
+        .about-card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 5px 18px #dddddd;
+            margin-bottom: 35px;
+        }
+
+        .about-card img {
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            margin: 0 auto 25px;
+        }
+
+        .about-card p {
+            color: #555555;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .info-card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 5px 18px #dddddd;
+            margin-bottom: 35px;
+        }
+
+        .info-card h3 {
+            color: #17365d;
+            border-left: 5px solid #e3263b;
+            padding-left: 12px;
+            margin-bottom: 25px;
+        }
+
+        .info-card ul {
+            color: #555555;
+            line-height: 1.8;
+            padding-left: 25px;
+        }
+
+        .info-card li {
+            margin-bottom: 12px;
+        }
+
+        .mission-card {
+            background: linear-gradient(135deg, #07549b, #365f9e);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 18px #dddddd;
+        }
+
+        .mission-card dt {
+            display: inline-block;
+            background-color: #e3263b;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .mission-card dd {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .back-button {
+            text-align: center;
+            margin: 30px 0 60px;
+        }
+
+        .back-button a {
+            display: inline-block;
+            background-color: #e3263b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 3px 8px #cccccc;
+        }
+
+        .back-button a:hover {
+            background-color: #b91e30;
+        }
+
+        footer {
+            background-color: #17365d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 12px;
+        }
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .school-name {
+                margin-bottom: 20px;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            .hero-box h2 {
+                font-size: 30px;
+            }
+
+            .about-card img {
+                width: 100%;
+                height: auto;
+            }
+
+        }

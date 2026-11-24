@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Campus Integrity Crusaders Club</title>
+<link rel="stylesheet" href="cic_1.css">
+<link rel="stylesheet" href="shared.css"></head>
+<body>
+<div class="topbar">
+<span>LAS PIÑAS NATIONAL HIGH SCHOOL - ALMANZA</span>
+<span>STUDENT ORGANIZATIONS</span>
+</div>
+<header>
+<div class="school-name">
+<img alt="School Logo" src="SCHOOLLOGO.jpg"/>
+<div>
+<h1>Las Piñas National High School - Almanza</h1>
+<p>Excellence • Leadership • Service</p>
+</div>
+</div>
+<nav class="shared-site-nav" id="main-nav">
+<ul>
+<li><a href="index.html#home">HOME</a></li>
+<li><button class="menu-button" data-menu="about-menu" type="button">ABOUT</button><ul class="dropdown" id="about-menu">
+<li><a href="MISSION_VISION.html">Mission &amp; Vision</a></li><li><a href="ORG_CHART.html">Organizational Chart</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="academics-menu" type="button">ACADEMICS</button><ul class="dropdown" id="academics-menu">
+<li><a href="SECTION_LIST.html">Grade Levels &amp; Sections</a></li><li><a href="MIM.html">Mathematics Club</a></li><li><a href="ICT_CLUB.html">ICT Club</a></li><li><a href="g3_project_TheScribe.html">The Scribe</a></li><li><a href="Ang_Tinig.html">Ang Tinig</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="student-menu" type="button">STUDENT LIFE</button><ul class="dropdown" id="student-menu">
+<li><a href="SSLG.html">SSLG</a></li><li><a href="g3_project_ESPCLUB.html">ESP Club</a></li><li><a href="BKD.html">BKD Club</a></li><li><a href="CIC (1).html">CIC Club</a></li><li><a href="GSP.html">Girl Scouts</a></li><li><a href="BSP.html">Boy Scouts</a></li><li><a href="GLEE.html">Glee Club</a></li><li><a href="AFDT_Club.html">Folkloric Dance Troupe</a></li><li><a href="YoungFarmersClub.html">Young Farmers Club</a></li><li><a href="g3_project_YES-O.html">YES-O Club</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="hymns-menu" type="button">HYMNS</button><ul class="dropdown" id="hymns-menu">
+<li><a href="ALMANZIANS_HYMN.html">Almanzians Hymn</a></li><li><a href="las_pinas_hymn.html">Las Piñas Hymn</a></li><li><a href="ncr_hymn.html">NCR Hymn</a></li><li><a href="national_anthem.html">National Anthem</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="team-menu" type="button">TEAM</button><ul class="dropdown" id="team-menu"><li><a href="credits.html">Website Team &amp; Credits</a></li></ul></li>
+</ul>
+</nav>
+</header>
+<section class="hero">
+<div class="hero-box">
+<p>INTEGRITY • LEADERSHIP • GOOD CITIZENSHIP</p>
+<h2>Campus Integrity Crusaders Club</h2>
+<span>
+                Empowering students to promote honesty, responsibility,
+                leadership, human rights, and social responsibility.
+            </span>
+</div>
+</section>
+<main class="content">
+<div class="section-title">
+<p>CIC • STUDENT ORGANIZATION</p>
+<h2>Campus Integrity Crusaders Club</h2>
+</div>
+<!-- About the Club -->
+<div class="about-card">
+<h3>About the Club</h3>
+<div class="logo-container">
+<img alt="This is the logo of the CIC Club" src="CIC club logo.jpg"/>
+</div>
+<p>
+                The CIC Club is a non-partisan, school-based youth organization recognized
+                by secondary or tertiary educational institutions and accredited by the
+                Office of the Ombudsman in the Philippines. The program aims to empower
+                the youth against corruption by developing leadership skills and instilling
+                core values like honesty and social responsibility.
+            </p>
+</div>
+<!-- Activities and Objectives -->
+<div class="info-card">
+<h3>
+                The Office of the Ombudsman and CIC May Jointly Undertake
+                Activities That Aim To:
+            </h3>
+<ul>
+<li>
+                    Cultivate the virtues of uprightness, responsibility, honesty,
+                    respect for authority, and love of country.
+                </li>
+<li>
+                    Instill a sense of good citizenship and responsible leadership.
+                </li>
+<li>
+                    Inculcate the basic principles of human rights and civic duties.
+                </li>
+<li>
+                    Promote the integration of Corruption Prevention Education (CPE)
+                    teaching modules in the school curriculum.
+                </li>
+</ul>
+</div>
+<!-- CIC Officers -->
+<div class="info-card">
+<h3>CIC Officers</h3>
+<dl class="officer-list">
+<dt><b>President</b></dt>
+<dd>
+                    Mary Lauren M. Bustillo
+                </dd>
+<dt><b>Vice President</b></dt>
+<dd>
+                    Jeremias Bajado
+                </dd>
+<dt><b>Secretary</b></dt>
+<dd>
+                    Ellaine Gervacio
+                </dd>
+<dt><b>Assistant Secretary</b></dt>
+<dd>
+                    Kazielle Maneclang
+                </dd>
+<dt><b>Treasurer</b></dt>
+<dd>
+                    Ejay Aquino Mabanta
+                </dd>
+<dt><b>Auditor</b></dt>
+<dd>
+                    Ghianne Rhetsel Chicano
+                </dd>
+<dt><b>Public Information Officer (P.I.O.)</b></dt>
+<dd>
+                    Myka Giah Estrebor
+                </dd>
+</dl>
+</div>
+<!-- Back to Home -->
+<div class="home">
+<a class="back-to-home" href="index.html">← Back to Home</a>
+</div>
+</main>
+<footer>
+
+        © 2026 Campus Integrity Crusaders Club | Las Piñas National High School
+
+    </footer>
+<script id="shared-nav-script">
+(function(){
+  const nav=document.getElementById('main-nav');
+  if(!nav) return;
+  const buttons=nav.querySelectorAll('.menu-button');
+  function closeMenus(){buttons.forEach(btn=>{const m=document.getElementById(btn.dataset.menu);if(m)m.classList.remove('open');btn.classList.remove('active');btn.setAttribute('aria-expanded','false');});}
+  buttons.forEach(btn=>{btn.setAttribute('aria-expanded','false');btn.addEventListener('click',function(e){e.stopPropagation();const menu=document.getElementById(btn.dataset.menu);const wasOpen=menu.classList.contains('open');closeMenus();if(!wasOpen){menu.classList.add('open');btn.classList.add('active');btn.setAttribute('aria-expanded','true');}});});
+  nav.querySelectorAll('.dropdown a').forEach(a=>a.addEventListener('click',function(){
+    if(location.pathname.endsWith('index.html') || location.pathname.endsWith('/')){
+      sessionStorage.setItem('lpnsa-home-scroll',String(window.scrollY));
+    }
+    closeMenus();
+  }));
+  document.addEventListener('click',function(e){if(!e.target.closest('#main-nav'))closeMenus();});
+})();
+</script></body>
+</html>

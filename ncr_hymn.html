@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NCR Hymn | LPNHS - Almanza</title>
+<link rel="stylesheet" href="ncr_hymn.css">
+<link rel="stylesheet" href="shared.css"></head>
+<body>
+<header><img alt="LPNHS - Almanza logo" src="SCHOOLLOGO.jpg"/><div><h1>LAS PIÑAS NATIONAL HIGH SCHOOL</h1><p>ALMANZA • HYMNS &amp; AUDIO</p></div><nav class="shared-site-nav" id="main-nav">
+<ul>
+<li><a href="index.html#home">HOME</a></li>
+<li><button class="menu-button" data-menu="about-menu" type="button">ABOUT</button><ul class="dropdown" id="about-menu">
+<li><a href="MISSION_VISION.html">Mission &amp; Vision</a></li><li><a href="ORG_CHART.html">Organizational Chart</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="academics-menu" type="button">ACADEMICS</button><ul class="dropdown" id="academics-menu">
+<li><a href="SECTION_LIST.html">Grade Levels &amp; Sections</a></li><li><a href="MIM.html">Mathematics Club</a></li><li><a href="ICT_CLUB.html">ICT Club</a></li><li><a href="g3_project_TheScribe.html">The Scribe</a></li><li><a href="Ang_Tinig.html">Ang Tinig</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="student-menu" type="button">STUDENT LIFE</button><ul class="dropdown" id="student-menu">
+<li><a href="SSLG.html">SSLG</a></li><li><a href="g3_project_ESPCLUB.html">ESP Club</a></li><li><a href="BKD.html">BKD Club</a></li><li><a href="CIC (1).html">CIC Club</a></li><li><a href="GSP.html">Girl Scouts</a></li><li><a href="BSP.html">Boy Scouts</a></li><li><a href="GLEE.html">Glee Club</a></li><li><a href="AFDT_Club.html">Folkloric Dance Troupe</a></li><li><a href="YoungFarmersClub.html">Young Farmers Club</a></li><li><a href="g3_project_YES-O.html">YES-O Club</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="hymns-menu" type="button">HYMNS</button><ul class="dropdown" id="hymns-menu">
+<li><a href="ALMANZIANS_HYMN.html">Almanzians Hymn</a></li><li><a href="las_pinas_hymn.html">Las Piñas Hymn</a></li><li><a href="ncr_hymn.html">NCR Hymn</a></li><li><a href="national_anthem.html">National Anthem</a></li>
+</ul></li>
+<li><button class="menu-button" data-menu="team-menu" type="button">TEAM</button><ul class="dropdown" id="team-menu"><li><a href="credits.html">Website Team &amp; Credits</a></li></ul></li>
+</ul>
+</nav></header>
+<main>
+<section class="hero"><small>NATIONAL CAPITAL REGION</small><h2>NCR Hymn</h2><p>Hymn of the National Capital Region.</p></section>
+<section class="media">
+<video controls="" preload="metadata"><source src="NCR_HYMN.mp4" type="video/mp4"/>Your browser does not support HTML5 video.</video>
+<audio controls="" preload="metadata"><source src="NCR_HYMN.mp3" type="audio/mpeg"/>Your browser does not support HTML5 audio.</audio>
+</section>
+<a class="back back-to-home" href="index.html#home">← BACK TO HOME</a>
+</main>
+<script id="shared-nav-script">
+(function(){
+  const nav=document.getElementById('main-nav');
+  if(!nav) return;
+  const buttons=nav.querySelectorAll('.menu-button');
+  function closeMenus(){buttons.forEach(btn=>{const m=document.getElementById(btn.dataset.menu);if(m)m.classList.remove('open');btn.classList.remove('active');btn.setAttribute('aria-expanded','false');});}
+  buttons.forEach(btn=>{btn.setAttribute('aria-expanded','false');btn.addEventListener('click',function(e){e.stopPropagation();const menu=document.getElementById(btn.dataset.menu);const wasOpen=menu.classList.contains('open');closeMenus();if(!wasOpen){menu.classList.add('open');btn.classList.add('active');btn.setAttribute('aria-expanded','true');}});});
+  nav.querySelectorAll('.dropdown a').forEach(a=>a.addEventListener('click',function(){
+    if(location.pathname.endsWith('index.html') || location.pathname.endsWith('/')){
+      sessionStorage.setItem('lpnsa-home-scroll',String(window.scrollY));
+    }
+    closeMenus();
+  }));
+  document.addEventListener('click',function(e){if(!e.target.closest('#main-nav'))closeMenus();});
+})();
+</script></body>
+</html>

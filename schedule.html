@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official Class Schedule | LPNHS-Almanza</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+body{background:#f5f8fc}
+.schedule-page{min-height:calc(100vh - 100px);padding:64px 6% 80px}
+.schedule-wrap{max-width:1080px;margin:auto}
+.schedule-heading{text-align:center;margin-bottom:30px}
+.schedule-heading .eyebrow{display:inline-block;color:#d71920;font-size:11px;font-weight:900;letter-spacing:2.5px;margin:0}
+.schedule-heading h2{font-size:clamp(30px,5vw,48px);line-height:1.1;color:#073b78;margin:9px 0}
+.schedule-heading p{color:#66788a;max-width:700px;margin:auto;font-size:14px}
+.schedule-card{background:#fff;border:1px solid #dfe8f2;border-radius:24px;padding:clamp(12px,3vw,28px);box-shadow:0 18px 50px rgba(6,46,99,.10)}
+.schedule-card img{display:block;width:100%;height:auto;max-width:850px;margin:auto;border-radius:12px}
+
+.schedule-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.schedule-actions a{display:inline-flex;padding:12px 20px;border-radius:999px;font-size:11px;font-weight:900}
+.schedule-back{background:#073b78;color:white}.schedule-home{border:1px solid #d5e0eb;color:#073b78;background:white}
+@media(max-width:750px){.schedule-page{padding:42px 5% 60px}.schedule-card{padding:9px;border-radius:15px}}
+</style>
+</head>
+<body>
+<header>
+<div class="brand">
+<img alt="LPNHS Almanza logo" src="SCHOOLLOGO.jpg">
+<div><h1>LAS PIÑAS NATIONAL HIGH SCHOOL</h1><p>ALMANZA • OFFICIAL SCHOOL WEBSITE</p></div>
+</div>
+<button class="mobile-menu-button" id="mobile-menu-button" aria-expanded="false">MENU</button>
+<nav class="shared-site-nav" id="main-nav">
+<ul>
+<li><a href="index.html#home">HOME</a></li>
+<li><a href="MISSION_VISION.html">ABOUT</a></li>
+<li><a href="SECTION_LIST.html">ACADEMICS</a></li>
+<li><a href="schedule.html" aria-current="page">SCHEDULE</a></li>
+<li><a href="credits.html">TEAM</a></li>
+</ul>
+</nav>
+</header>
+<main class="schedule-page">
+<div class="schedule-wrap">
+<div class="schedule-heading">
+<span class="eyebrow">STUDENT INFORMATION</span>
+<h2>Official Class Schedule</h2>
+<p>Check the school's announced class hours for regular students and the Open High School Program.</p>
+</div>
+<div class="schedule-card">
+<img src="schedule.jpg" alt="LPNHS-Almanza official class schedule: Regular students, Grade 7 and Grade 10 from 5:40 a.m. to 12:20 p.m.; Grade 8 and Grade 9 from 12:20 p.m. to 7:00 p.m. Open High School Program from 6:40 a.m. to 4:00 p.m.">
+</div>
+<div class="schedule-actions">
+<a class="schedule-back" href="index.html">← BACK TO HOME</a>
+<a class="schedule-home" href="SECTION_LIST.html">GRADE LEVELS &amp; SECTIONS</a>
+</div>
+</div>
+</main>
+<script>
+(function(){
+ const button=document.getElementById('mobile-menu-button');
+ const nav=document.getElementById('main-nav');
+ if(button&&nav)button.addEventListener('click',function(){
+  const opened=nav.classList.toggle('mobile-open');
+  button.setAttribute('aria-expanded',String(opened));
+  button.textContent=opened?'CLOSE':'MENU';
+ });
+})();
+</script>
+</body>
+</html>

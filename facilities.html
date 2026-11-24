@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Facilities | LPNHS-Almanza</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+body{background:#f5f8fc}
+.info-page{min-height:calc(100vh - 100px);padding:58px 6% 78px}
+.info-wrap{max-width:1080px;margin:auto}
+.info-heading{text-align:center;max-width:760px;margin:0 auto 30px}
+.info-heading .eyebrow{color:#d71920;font-size:11px;font-weight:900;letter-spacing:2.5px}
+.info-heading h2{color:#073b78;font-size:clamp(30px,5vw,46px);line-height:1.12;margin:10px 0}
+.info-heading p{color:#66788a;font-size:14px;line-height:1.7}
+.info-card{background:#fff;border:1px solid #dfe8f2;border-radius:22px;padding:clamp(12px,3vw,26px);box-shadow:0 18px 48px rgba(6,46,99,.09)}
+.info-card img{display:block;width:100%;height:auto;object-fit:contain;border-radius:10px}
+
+.info-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.info-actions a{display:inline-flex;padding:12px 20px;border-radius:999px;font-size:11px;font-weight:900;text-decoration:none}
+.info-back{background:#073b78;color:#fff}
+.info-schedule{border:1px solid #d5e0eb;color:#073b78;background:#fff}
+.facility-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.facility-slot{min-width:0;background:#f8fafc;border:1px dashed #b8c9dc;border-radius:16px;padding:12px}
+.facility-slot img{width:100%;height:auto;display:block;border-radius:10px}
+.facility-slot p{margin:10px 4px 2px;text-align:center;color:#64778b;font-size:12px}
+@media(max-width:700px){.info-page{padding:40px 5% 60px}.info-card{padding:10px;border-radius:15px}.facility-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img alt="LPNHS Almanza logo" src="SCHOOLLOGO.jpg">
+    <div><h1>LAS PIÑAS NATIONAL HIGH SCHOOL</h1><p>ALMANZA • OFFICIAL SCHOOL WEBSITE</p></div>
+  </div>
+  <button class="mobile-menu-button" id="mobile-menu-button" aria-expanded="false">MENU</button>
+  <nav class="shared-site-nav" id="main-nav">
+    <ul>
+      <li><a href="index.html#home">HOME</a></li>
+      <li><a href="MISSION_VISION.html">ABOUT</a></li>
+      <li><a href="SECTION_LIST.html">ACADEMICS</a></li>
+      <li><a href="schedule.html">SCHEDULE</a></li>
+      <li><a href="credits.html">TEAM</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="info-page">
+  <div class="info-wrap">
+    <div class="info-heading">
+      <span class="eyebrow">CAMPUS • LEARNING SPACES</span>
+      <h2>Our School Facilities</h2>
+      <p>Explore the facilities and learning spaces of Las Piñas National High School – Almanza.</p>
+    </div>
+    
+<div class="info-card">
+  <div class="facility-grid">
+    <div class="facility-slot">
+      <img src="FACILITIES-1.jpg" alt="LPNHS-Almanza facilities collage, image 1">
+      <p>School Facilities — Image 1</p>
+    </div>
+    <div class="facility-slot">
+      <img src="FACILITIES-2.jpg" alt="LPNHS-Almanza facilities collage, image 2">
+      <p>School Facilities — Image 2</p>
+    </div>
+  </div>
+</div>
+
+    <div class="info-actions">
+      <a class="info-back" href="index.html">← BACK TO HOME</a>
+      <a class="info-schedule" href="schedule.html">VIEW CLASS SCHEDULE</a>
+    </div>
+  </div>
+</main>
+<script>
+(function(){
+ const button=document.getElementById('mobile-menu-button');
+ const nav=document.getElementById('main-nav');
+ if(button&&nav)button.addEventListener('click',function(){
+  const opened=nav.classList.toggle('mobile-open');
+  button.setAttribute('aria-expanded',String(opened));
+  button.textContent=opened?'CLOSE':'MENU';
+ });
+})();
+</script>
+</body>
+</html>
